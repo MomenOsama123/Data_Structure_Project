@@ -86,13 +86,15 @@ public class Main{
                     System.out.println ("mohamed waleed");
                     break;
                 case 4:
-                    System.out.println (159);
+                     System.out.println("Enter Course's ID : ");
+                    CourseID = input.nextLong();
+                    Courses.remove_course(CourseID);
                     break;
                 case 5:
                     System.out.println (123);
                     break;
                 case 6:
-                    System.out.println (111);
+                    Courses.Get_Last_Course(); 
                     break;
                 case 7:
 

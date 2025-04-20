@@ -154,4 +154,39 @@ public class Course_List {
 
         return slow;
     }
+    // Mo' Starts from here
+    public int Get_Last_Course(){
+        if(head==null&&tail==null){ // cheeck if our list is empty or not
+            System.out.println("Thre aren't any courses here"); 
+            return -1 
+        }else{
+            return Course_List.tail.info; //return the last added-course's ID
+        } 
+    }
+    public void remove_course(int ID) {
+        Course_Node temp = this.head; //temperary pointer points on head 
+        while (temp != null) {
+            if (temp.info == ID) { //cheeck if the temp's info is the id which we wanna delete it
+                if (temp.prev != null) {
+                    temp.prev.next = temp.next; //remove this node
+                } else {
+                    head = temp.next; //increment
+                }
+                if (temp.next != null) { // were there next elements ??
+                    temp.next.prev = temp.prev;
+                } else {
+                    tail = temp.prev;
+                }
+                break;
+            }
+            temp = temp.next;
+        }
+        if (temp == null) { // if we didn't find the course
+            System.out.println("Course not found.");
+        } else { //if we found this course and deleted it
+            System.out.println("Course removed successfully.");
+        }
+        //Good luck 
+        //Mo' was here
+}
 }
