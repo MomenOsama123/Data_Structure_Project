@@ -155,18 +155,18 @@ public class Course_List {
         return slow;
     }
     // Mo' Starts from here
-    public int Get_Last_Course(){
+    public  int Get_Last_Course(){
         if(head==null&&tail==null){ // cheeck if our list is empty or not
             System.out.println("Thre aren't any courses here"); 
-            return -1 
+            return -1 ;
         }else{
-            return Course_List.tail.info; //return the last added-course's ID
+            return tail.ID; //return the last added-course's ID
         } 
     }
-    public void remove_course(int ID) {
+    public void remove_course(long ID) {
         Course_Node temp = this.head; //temperary pointer points on head 
         while (temp != null) {
-            if (temp.info == ID) { //cheeck if the temp's info is the id which we wanna delete it
+            if (temp.ID == ID) { //cheeck if the temp's info is the id which we wanna delete it
                 if (temp.prev != null) {
                     temp.prev.next = temp.next; //remove this node
                 } else {
