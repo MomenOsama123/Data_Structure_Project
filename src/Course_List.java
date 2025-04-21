@@ -155,7 +155,7 @@ public class Course_List {
         return slow;
     }
     // Mo' Starts from here
-    public  int Get_Last_Course(){
+    public  long Get_Last_Course(){
         if(head==null&&tail==null){ // cheeck if our list is empty or not
             System.out.println("Thre aren't any courses here"); 
             return -1 ;
