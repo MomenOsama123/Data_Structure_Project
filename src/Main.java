@@ -88,13 +88,13 @@ public class Main{
                 case 4:
                      System.out.println("Enter Course's ID : ");
                     CourseID = input.nextLong();
-                    // Courses.remove_course(CourseID);
+                     Course_List.remove_course(CourseID);
                     break;
                 case 5:
                     System.out.println (123);
                     break;
                 case 6:
-                    // Courses.Get_Last_Course(); 
+                     Course_List.Get_Last_Course(); 
                     break;
                 case 7:
 
